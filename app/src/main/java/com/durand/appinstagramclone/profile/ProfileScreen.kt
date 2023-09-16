@@ -13,7 +13,6 @@ fun ProfileScreen() {
     val user = User(
         "josuedurand1924",
         "https://via.placeholder.com/200",
-        14,
         20,
         300,
         "Josue Durand",
@@ -28,7 +27,39 @@ fun ProfileScreen() {
             Story("https://via.placeholder.com/200", "Story 7"),
             Story("https://via.placeholder.com/200", "Story 8"),
             Story("https://via.placeholder.com/200", "Story 9"),
-            Story("https://via.placeholder.com/200", "Story 10")
+            Story("https://via.placeholder.com/200", "Story 10"),
+            Story("https://via.placeholder.com/200", "Story 11"),
+            Story("https://via.placeholder.com/200", "Story 12"),
+            Story("https://via.placeholder.com/200", "Story 13"),
+            Story("https://via.placeholder.com/200", "Story 14"),
+            Story("https://via.placeholder.com/200", "Story 15"),
+            Story("https://via.placeholder.com/200", "Story 16"),
+            Story("https://via.placeholder.com/200", "Story 17"),
+            Story("https://via.placeholder.com/200", "Story 18"),
+            Story("https://via.placeholder.com/200", "Story 19"),
+            Story("https://via.placeholder.com/200", "Story 20")
+        ),
+        post = listOf(
+            "https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369.jpg",
+            "https://www.mundodeportivo.com/alfabeta/hero/2023/03/image-2023-03-23t222927.291.jpg?width=1200&aspect_ratio=16:9",
+            "https://images.alphacoders.com/598/thumb-1920-598846.jpg",
+            "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/1000",
         )
     )
     Column {
@@ -40,7 +71,7 @@ fun ProfileScreen() {
         )
         ProfileInformation(
             profileUrl = user.profileUrl,
-            post = user.post,
+            post = user.post.size ,
             followers = user.followers,
             following = user.following,
             modifier = Modifier.padding(start = 16.dp)
@@ -66,6 +97,13 @@ fun ProfileScreen() {
             modifier = Modifier.padding(
                 start = 16.dp,
                 end = 16.dp,
+                top = 6.dp
+            )
+        )
+        ProfilePost(
+            post = user.post,
+            modifier = Modifier.padding(
+                top = 1.5.dp
             )
         )
     }
